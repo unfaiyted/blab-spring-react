@@ -1,5 +1,5 @@
 # Blab - Discord / Slack Clone
--
+- Testing and learning React and Spring Integration
 
 # Purpose
 -
