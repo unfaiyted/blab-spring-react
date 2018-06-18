@@ -22,3 +22,19 @@ backend datat using RestAPI
 
 # ToDo
 - Everything
+- Determine models and repository structure for data backend (10%)
+- Create data interaction via Rest API to React front end
+
+#Setup
+
+1. NPM setup and install 
+    - Go to `\src\main\resources\static\` and run `npm install` to setup and install NPM for React
+    - You can then run `npm run start` which by default will run the localhost dev server at `http:\\localhost:3000\`
+    - This is your testing area for the react components.
+2. Spring setup
+    - Be sure to import the latest dependencies via `pom.xml`
+    - Copy `example.properties` and rename it as `application.properties`
+        - Be sure to modify the database connection information to match your system.
+        - This has been tested using a MySQL database connection, although in theory this could be adapted to work with others
+        
+ 
