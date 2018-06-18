@@ -5,31 +5,24 @@ import com.faiyt.blab.models.user.User;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @Entity
-public class Space {
+public class Group {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-
     @ManyToOne
     private User owner;
 
-    private LocalDate createdDate = LocalDate.now();
+    @ManyToMany
+    private List<User> members;
 
-    public Space() {}
-
-    public Space(String name) {
-        this.name = name;
-    }
-
-    public Space(String name, User owner) {
-        this.name = name;
+    public Group(User owner, List<User> members) {
         this.owner = owner;
+        this.members = members;
     }
 }
